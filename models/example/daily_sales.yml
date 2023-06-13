@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: daily_sales
+    description: This table provides daily sales data aggregated by date.
+    columns:
+      - name: date
+        description: The date of the sales data.
+        tests:
+          - not_null
+          - unique
+      - name: total_sales
+        description: The total sales for the given date.
+        tests:
+          - not_null
